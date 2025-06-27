@@ -5,6 +5,8 @@ import connectDB from "./configs/db.js";
 import adminRouter from "./routes/adminRoutes.js";
 import blogRouter from "./routes/blogRouters.js";
 
+const PORT = process.env.PORT;
+
 const app = express();
 await connectDB();
 
@@ -17,5 +19,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/admin", adminRouter);
 app.use("/api/blog", blogRouter);
+
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
 
 export default app;
