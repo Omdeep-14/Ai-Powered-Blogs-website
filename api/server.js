@@ -20,6 +20,6 @@ app.get("/", (req, res) => {
 app.use("/api/admin", adminRouter);
 app.use("/api/blog", blogRouter);
 
-app.listen(3000 || PORT, () => console.log(`server started on port ${PORT}`));
+app.listen(PORT, () => console.log(`server started on port ${PORT}`));
 
 export default app;

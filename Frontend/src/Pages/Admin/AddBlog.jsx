@@ -120,7 +120,7 @@ function AddBlog() {
         <p className="mt-4">Blog Description</p>
         <div className="max-w-lg h-74 pb-16 sm:pb-10 pt-2 relative">
           <div ref={editorRef}></div>
-          {loading && (
+          {isLoading && (
             <div className="absolute right-0 left-0 top-0 bottom-0 flex items-center justify-center">
               <div className="w-8 h-8 rounded-full border-2 border-t-white animate-spin "></div>
             </div>
