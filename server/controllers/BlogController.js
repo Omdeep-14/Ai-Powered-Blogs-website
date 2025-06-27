@@ -124,7 +124,7 @@ export const generateContent = async (req, res) => {
     const { prompt } = req.body;
     const content = await main(
       prompt +
-        "Generate a blog content for this topic in simple text format ,start directly with topic no other text"
+        "Generate a blog content for this topic in simple text format ,start directly with topic no other text ,use rich text format"
     );
     res.json({
       success: true,
